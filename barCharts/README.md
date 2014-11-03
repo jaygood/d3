@@ -1,3 +1,3 @@
-#D3 tutorials building a bar chart
+#D3 tutorials
 
-http://bost.ocks.org/mike/bar/
+https://github.com/mbostock/d3/wiki/Tutorials
