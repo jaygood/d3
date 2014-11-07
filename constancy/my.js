@@ -106,5 +106,5 @@
   var timeout = setTimeout(function() {
     menu.property("value", "65 Years and Over").node().focus();
     change();
-  }, 5000);
+  }, 2000);
 })();

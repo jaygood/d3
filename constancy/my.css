@@ -1,3 +1,17 @@
+html {
+  min-width: 1040px;
+}
+
+body {
+  margin: 5em auto 4em auto;
+  position: relative;
+  width: 960px;
+}
+
+a:not(:hover) {
+  text-decoration: none;
+}
+
 svg {
   font: 10px sans-serif;
 }
@@ -13,13 +27,16 @@ svg {
 .axis {
   shape-rendering: crispEdges;
 }
-.axis path {
-  stroke: none;
-}
+
 .x.axis line {
   stroke: #fff;
   stroke-opacity: .8;
 }
 .y.axis path {
   stroke: black;
+}
+
+.axis path, .axis line {
+  stroke: #000;
+  fill: none;
 }
