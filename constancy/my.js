@@ -1,6 +1,6 @@
 (function(){
   var margin = {top: 20, right: 40, bottom: 10, left: 40},
-      width = 960,
+      width = 560,
       height = 250 - margin.top - margin.bottom;
   var format = d3.format(".1%"),
       states,

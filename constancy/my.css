@@ -1,11 +1,11 @@
 html {
-  min-width: 1040px;
+  margin-left:2em;
 }
 
 body {
   margin: 5em auto 4em auto;
   position: relative;
-  width: 960px;
+  width: 760px;
 }
 
 a:not(:hover) {
@@ -36,7 +36,12 @@ svg {
   stroke: black;
 }
 
-.axis path, .axis line{
+.axis path{
+  stroke: none;
+  fill: none;
+}
+
+.axis line{
   stroke: #000;
   fill: none;
 }
