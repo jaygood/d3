@@ -29,6 +29,7 @@
       .attr("y2", height);
   var menu = d3.select("#menu select")
       .on("change", change);
+
   d3.csv("data/data.csv", function(data) {
     states = data;
     var ages = d3.keys(states[0]).filter(function(key) {
@@ -46,16 +47,19 @@
     menu.property("value", "18 to 24 Years");
     redraw();
   });
-  var altKey;
+
+  var altKey = false;
   d3.select(window)
       .on("keydown", function() { altKey = d3.event.altKey; })
       .on("keyup", function() { altKey = false; });
+
   function change() {
     clearTimeout(timeout);
     d3.transition()
         .duration(altKey ? 7500 : 750)
         .each(redraw);
   }
+
   function redraw() {
     var age1 = menu.property("value"),
         top = states.sort(function(a, b) { return b[age1] - a[age1]; }).slice(0, 10);
@@ -103,6 +107,7 @@
     d3.transition(svg).select(".x.axis")
         .call(xAxis);
   }
+
   var timeout = setTimeout(function() {
     menu.property("value", "65 Years and Over").node().focus();
     change();
